@@ -31,3 +31,20 @@ print(user_cards)
 computer_cards.append(deal_card())
 computer_cards.append(deal_card())
 print(computer_cards)
+
+
+# Create a function called calculate_score() that takes a List of cards as input
+# and returns the score.
+# Look up the sum() function to help you do this.
+def calculate_score(card_list):
+    if 11 in card_list and 10 in card_list:
+        sum_cards = 0
+        # game_ends=True
+        return 0
+
+    if sum(card_list) > 21 and 11 in card_list:
+        card_list.remove(11)
+        card_list.append(1)
+        sum_cards = sum(card_list)
+
+    return sum(card_list)
