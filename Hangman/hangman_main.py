@@ -30,7 +30,7 @@ for _ in range(word_length):
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
-    # If the user has entered a letter they've already guessed, print the letter and let them know.
+    # If the user has entered a letter they've already guessed, print the letter that they already added it.
 
     # Check guessed letter and get the postion to replace in display word
     for position in range(word_length):
@@ -39,8 +39,9 @@ while not end_of_game:
         if letter == guess:
 
             if guess in display:
-                print(f"{guess} is already choosen.chose another letter")
+                print(f"{guess} is already choosen.Chose another letter")
             else:
+                # otherwise replace that guess letter in display
                 display[position] = letter
 
     # Check if user is wrong. you cant putin above else otherwise loop will keep on running every time.
