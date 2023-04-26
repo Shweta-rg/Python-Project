@@ -50,10 +50,22 @@ def calculate_score(card_list):
     return sum(card_list)
 
 
-user_score = calculate_score(user_cards)
-print(user_score)
-computer_score = calculate_score(computer_cards)
-print(computer_score)
+while (game_ends != True):
+    user_score = calculate_score(user_cards)
+    print(user_score)
+    computer_score = calculate_score(computer_cards)
+    print(computer_score)
 
-if user_score == 0 or computer_score == 0 or user_score > 21:
-    game_ends = True
+    if user_score == 0 or computer_score == 0 or user_score > 21:
+        game_ends = True
+    else:
+
+        input_choice = (
+            input("Do you want to choose another card, Y/N")).upper()
+        if (input_choice == 'Y'):
+            user_cards.append(deal_card())
+            print(user_cards)
+            calculate_score(user_cards)
+
+        else:
+            game_ends = True
