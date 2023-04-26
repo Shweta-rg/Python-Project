@@ -14,6 +14,7 @@ word_length = len(chosen_word)
 end_of_game = False
 lives = 6
 print(life.logo)
+# added as amnby lives as amny stages pictures are to get count of ilfe a s well as art
 
 # Import the logo from hangman_art.py and print it at the start of the game.
 
