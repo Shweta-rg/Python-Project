@@ -48,3 +48,12 @@ def calculate_score(card_list):
         sum_cards = sum(card_list)
 
     return sum(card_list)
+
+
+user_score = calculate_score(user_cards)
+print(user_score)
+computer_score = calculate_score(computer_cards)
+print(computer_score)
+
+if user_score == 0 or computer_score == 0 or user_score > 21:
+    game_ends = True
