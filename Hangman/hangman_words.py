@@ -194,6 +194,7 @@ word_list = [
     'whizzing',
     'whomever',
     'wimpy',
+    'wimpykid'
     'witchcraft',
     'wizard',
     'woozy',
@@ -208,6 +209,7 @@ word_list = [
     'zephyr',
     'zigzag',
     'zigzagging',
+    'zingha'
     'zilch',
     'zipper',
     'zodiac',
