@@ -32,7 +32,7 @@
 
 
 import random
-from os import clear
+import os
 from art import logo
 
 
@@ -125,7 +125,9 @@ def play_game():
 
 # Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    clear()
+    # import os
+
+    os.system('cls')
     play_game()
 
 # steps 4: Create a deal_card() function that uses the List below to *return* a random card.
