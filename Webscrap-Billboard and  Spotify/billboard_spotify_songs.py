@@ -27,10 +27,24 @@ print(song_names)
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="4e48f10110d542ddab14f55182444767",
                                                client_secret="23660643e07844c2b791e2d8937ebc93",
-                                               redirect_uri="http://example.com",
-                                               scope="playlist-modify-private"))
+                                               redirect_uri=" http://localhost:8888/callback",
+                                               scope="playlist-modify-private",
+                                               show_dialog=True,
+                                               cache_path="token.txt"))
+user_key = sp.current_user()["id"]
 
-results = sp.current_user_saved_tracks()
-for idx, item in enumerate(results['items']):
-    track = item['track']
-    print(idx, track['artists'][0]['name'], " – ", track['name'])
+# user_id = sp.current_user()["id"]
+# date = input(
+#     "Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
+# song_names = ["The list of song", "titles from your", "web scrape"]
+
+# song_uris = []
+# year = date.split("-")[0]
+# for song in song_names:
+#     result = sp.search(q=f"track:{song} year:{year}", type="track")
+#     print(result)
+#     try:
+#         uri = result["tracks"]["items"][0]["uri"]
+#         song_uris.append(uri)
+#     except IndexError:
+#         print(f"{song} doesn't exist in Spotify. Skipped.")
