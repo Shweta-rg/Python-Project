@@ -13,14 +13,14 @@ def make_bold(function):
 
 def make_underlined(function):
     def wrapper():
-        bold_text = function()
+        # bold_text = function()
         return "<u>"+function() + "</u>"
     return wrapper
 
 
 def make_empahsis(function):
     def wrapper():
-        bold_text = function()
+        # bold_text = function()
         return "<em>"+function() + "</em>"
     return wrapper
 
@@ -40,7 +40,7 @@ def say_bye():
 # after putting username in url whateven two input comes up in function
 
 
-@app.route("/username/<name>/<int:number>")
+@app.route("/<name>/<int:number>")
 def greet(name, number):
     return f"Hello there {name}, you are {number} years old!."
 
